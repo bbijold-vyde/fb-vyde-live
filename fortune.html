@@ -15,7 +15,6 @@
     .mark { font-family:'Cormorant Garamond',Georgia,serif; font-weight:500; letter-spacing:.42em; font-size:.78rem; color:var(--gold); text-transform:uppercase; }
     h1 { font-family:'Cormorant Garamond',Georgia,serif; font-weight:500; font-size:4.4rem; line-height:.9; letter-spacing:.02em; margin:.85rem 0 .4rem; }
     .rule { width:72px; height:1px; background:var(--gold); margin:1.1rem auto; }
-    .deck { color:#d9d0c2; font-family:'Cormorant Garamond',Georgia,serif; font-style:italic; font-size:1.35rem; }
     form { margin-top:2rem; background:var(--ivory); color:var(--ink); text-align:left; padding:1.75rem 1.6rem 1.5rem; box-shadow:0 24px 60px rgba(0,0,0,.35); }
     label { display:block; font-size:.68rem; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); margin:1rem 0 .4rem; }
     label:first-of-type { margin-top:0; }
@@ -24,7 +23,6 @@
     button { margin-top:1.4rem; width:100%; background:var(--ink); color:var(--ivory); border:0; padding:.85rem 1rem; letter-spacing:.18em; text-transform:uppercase; font-size:.72rem; cursor:pointer; }
     button:hover { background:#2c261f; }
     .refusal { margin-top:1rem; color:var(--wine); font-size:.92rem; }
-    .locked { margin-top:.8rem; color:var(--muted); font-size:.85rem; }
     footer { text-align:center; padding:1.5rem 1rem 2rem; color:#8d8478; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; }
     @media (max-width:600px) { h1 { font-size:3.2rem; } }
   </style>
@@ -34,7 +32,6 @@
     <p class="mark">Private office</p>
     <h1>Blackwood<br>Fortune</h1>
     <div class="rule"></div>
-    <p class="deck">The books and the messages of the Remainder.</p>
     <form id="door">
       <label for="who">Name</label>
       <input id="who" name="who" autocomplete="off">
@@ -42,7 +39,6 @@
       <input id="password" name="password" type="password" autocomplete="off">
       <button type="submit">Enter</button>
       <p id="refusal" class="refusal" role="alert" hidden>Access refused. The books and the messages remain sealed.</p>
-      <p class="locked">The password slip has not been issued.</p>
     </form>
   </main>
   <footer>Blackwood Remainder · By appointment</footer>
