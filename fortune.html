@@ -3,72 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blackwood Fortune | FB-VYDE</title>
+  <title>Blackwood Fortune</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    :root { --navy:#0a1628; --navy-light:#132337; --gold:#c9a227; --gold-light:#e6c56e; --cream:#f5f1e8; --text:#e8e4d9; --text-muted:#a8a39a; --red:#e7b4b4; }
+    :root { --ink:#1a1612; --ivory:#f6f1e8; --stone:#e6dfd2; --gold:#8d7344; --muted:#6f675c; --wine:#7a3030; }
     * { box-sizing:border-box; margin:0; padding:0; }
-    body { font-family:'Inter',system-ui,sans-serif; background:var(--navy); color:var(--text); line-height:1.6; }
-    a { color:var(--gold-light); text-decoration:none; }
-    a:hover { text-decoration:underline; }
-    header { background:var(--navy-light); border-bottom:2px solid var(--gold); padding:1rem 2rem; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:100; }
-    .logo-area { display:flex; align-items:center; gap:1rem; }
-    .logo-area img { height:60px; }
-    .logo-text h1 { font-family:'Playfair Display',serif; font-size:1.6rem; letter-spacing:1px; color:var(--gold); }
-    .logo-text p { font-size:.75rem; color:var(--text-muted); letter-spacing:2px; text-transform:uppercase; }
-    nav { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:.35rem 1.1rem; }
-    nav a { font-weight:500; }
-    main { max-width:520px; margin:3rem auto; padding:0 1.5rem 2rem; }
-    h2 { font-family:'Playfair Display',serif; font-size:2.4rem; color:var(--cream); line-height:1.15; margin-bottom:.5rem; }
-    .intro { color:var(--text-muted); margin-bottom:1.5rem; }
-    form { background:var(--navy-light); border:1px solid rgba(201,162,39,.35); border-radius:6px; padding:1.5rem; }
-    label { display:block; font-size:.8rem; letter-spacing:.06em; text-transform:uppercase; color:var(--gold-light); margin:1rem 0 .35rem; }
+    body { min-height:100vh; display:flex; flex-direction:column; background:radial-gradient(circle at top, #2a241c 0%, #100e0c 55%); color:var(--ivory); font-family:'Inter',system-ui,sans-serif; }
+    main { width:min(460px, calc(100% - 2rem)); margin:auto; padding:3rem 0; text-align:center; }
+    .mark { font-family:'Cormorant Garamond',Georgia,serif; font-weight:500; letter-spacing:.42em; font-size:.78rem; color:var(--gold); text-transform:uppercase; }
+    h1 { font-family:'Cormorant Garamond',Georgia,serif; font-weight:500; font-size:4.4rem; line-height:.9; letter-spacing:.02em; margin:.85rem 0 .4rem; }
+    .rule { width:72px; height:1px; background:var(--gold); margin:1.1rem auto; }
+    .deck { color:#d9d0c2; font-family:'Cormorant Garamond',Georgia,serif; font-style:italic; font-size:1.35rem; }
+    form { margin-top:2rem; background:var(--ivory); color:var(--ink); text-align:left; padding:1.75rem 1.6rem 1.5rem; box-shadow:0 24px 60px rgba(0,0,0,.35); }
+    label { display:block; font-size:.68rem; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); margin:1rem 0 .4rem; }
     label:first-of-type { margin-top:0; }
-    input { width:100%; background:#070e18; color:var(--cream); border:1px solid rgba(201,162,39,.35); border-radius:4px; padding:.7rem .8rem; font:inherit; }
-    input:focus { outline:2px solid var(--gold); outline-offset:1px; }
-    button { margin-top:1.25rem; background:var(--gold); color:var(--navy); border:0; border-radius:4px; padding:.7rem 1rem; font:inherit; font-weight:600; cursor:pointer; }
-    button:hover { background:var(--gold-light); }
-    .refusal { margin-top:1rem; color:var(--red); }
-    .locked { margin-top:1rem; color:var(--text-muted); font-size:.9rem; }
-    footer { background:#070e18; text-align:center; padding:2rem; margin-top:2rem; font-size:.85rem; color:var(--text-muted); border-top:1px solid rgba(201,162,39,.2); }
-    @media (max-width:700px) { header { flex-direction:column; gap:1rem; text-align:center; } nav { justify-content:center; } }
+    input { width:100%; background:transparent; color:var(--ink); border:0; border-bottom:1px solid #c9bfae; padding:.55rem 0; font:inherit; border-radius:0; }
+    input:focus { outline:none; border-bottom-color:var(--gold); }
+    button { margin-top:1.4rem; width:100%; background:var(--ink); color:var(--ivory); border:0; padding:.85rem 1rem; letter-spacing:.18em; text-transform:uppercase; font-size:.72rem; cursor:pointer; }
+    button:hover { background:#2c261f; }
+    .refusal { margin-top:1rem; color:var(--wine); font-size:.92rem; }
+    .locked { margin-top:.8rem; color:var(--muted); font-size:.85rem; }
+    footer { text-align:center; padding:1.5rem 1rem 2rem; color:#8d8478; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; }
+    @media (max-width:600px) { h1 { font-size:3.2rem; } }
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo-area">
-      <img src="logo.jpg" alt="FB-VYDE Logo">
-      <div class="logo-text"><h1>FB-VYDE</h1><p>Investigative Agency</p></div>
-    </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="news.html">News</a>
-      <a href="updates.html">Case Updates</a>
-      <a href="suspects.html">Persons</a>
-      <a href="evidence.html">Evidence</a>
-      <a href="fortune.html">Books</a>
-    </nav>
-  </header>
-
   <main>
-    <h2>Blackwood Fortune</h2>
-    <p class="intro">Login to view the books and the messages. The door is here. It is not open.</p>
+    <p class="mark">Private office</p>
+    <h1>Blackwood<br>Fortune</h1>
+    <div class="rule"></div>
+    <p class="deck">The books and the messages of the Remainder.</p>
     <form id="door">
       <label for="who">Name</label>
       <input id="who" name="who" autocomplete="off">
       <label for="password">Password</label>
       <input id="password" name="password" type="password" autocomplete="off">
-      <button type="submit">Open the books</button>
-      <p id="refusal" class="refusal" role="alert" hidden>The password was refused. The books and the messages stay closed.</p>
+      <button type="submit">Enter</button>
+      <p id="refusal" class="refusal" role="alert" hidden>Access refused. The books and the messages remain sealed.</p>
       <p class="locked">The password slip has not been issued.</p>
     </form>
   </main>
-
-  <footer>
-    <p>FB-VYDE &nbsp;•&nbsp; Case File 26-HALE &nbsp;•&nbsp; Fictional investigation</p>
-  </footer>
+  <footer>Blackwood Remainder · By appointment</footer>
   <script>
     document.getElementById("door").addEventListener("submit", function (event) {
       event.preventDefault();

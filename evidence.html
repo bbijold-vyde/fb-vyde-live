@@ -28,6 +28,7 @@
     .evidence-item img { width:100%; height:200px; object-fit:cover; }
     .evidence-content { padding:1.25rem; }
     .evidence-content h3 { font-size:1.15rem; color:var(--gold); margin-bottom:.5rem; }
+    .evidence-content p + p { margin-top:.75rem; }
     .tag { display:inline-block; background:rgba(201,162,39,.15); color:var(--gold-light); font-size:.75rem; padding:.2rem .5rem; border-radius:3px; margin-bottom:.75rem; }
     footer { background:#070e18; text-align:center; padding:2rem; margin-top:4rem; font-size:.85rem; color:var(--text-muted); border-top:1px solid rgba(201,162,39,.2); }
     @media (max-width:700px) { header { flex-direction:column; gap:1rem; text-align:center; } nav { justify-content:center; } }
@@ -45,7 +46,6 @@
       <a href="updates.html">Case Updates</a>
       <a href="suspects.html">Persons</a>
       <a href="evidence.html">Evidence</a>
-      <a href="fortune.html">Books</a>
     </nav>
   </header>
 
@@ -76,6 +76,14 @@
           <span class="tag">Released · The room</span>
           <h3>The board</h3>
           <p>Physical red-string board in the back offices. Pages are added as they are released.</p>
+        </div>
+      </article>
+      <article class="evidence-item">
+        <div class="evidence-content">
+          <span class="tag">Released · The books</span>
+          <h3>Blackwood Fortune</h3>
+          <p>Private office for the books and the messages. The door is up. It does not open yet.</p>
+          <p><a href="fortune.html" target="_blank" rel="noopener noreferrer">Open the books</a></p>
         </div>
       </article>
     </div>
