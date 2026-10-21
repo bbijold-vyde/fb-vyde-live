@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evidence | FB-VYDE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --navy:#0a1628; --navy-light:#132337; --gold:#c9a227; --gold-light:#e6c56e; --cream:#f5f1e8; --text:#e8e4d9; --text-muted:#a8a39a; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:'Inter',system-ui,sans-serif; background:var(--navy); color:var(--text); line-height:1.6; }
+    a { color:var(--gold-light); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    header { background:var(--navy-light); border-bottom:2px solid var(--gold); padding:1rem 2rem; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:100; }
+    .logo-area { display:flex; align-items:center; gap:1rem; }
+    .logo-area img { height:60px; }
+    .logo-text h1 { font-family:'Playfair Display',serif; font-size:1.6rem; letter-spacing:1px; color:var(--gold); }
+    .logo-text p { font-size:.75rem; color:var(--text-muted); letter-spacing:2px; text-transform:uppercase; }
+    nav a { margin-left:1.5rem; font-weight:500; }
+    .container { max-width:1000px; margin:2rem auto; padding:0 1.5rem; }
+    h2 { font-family:'Playfair Display',serif; font-size:2.2rem; color:var(--cream); margin-bottom:.5rem; }
+    .intro { color:var(--text-muted); margin-bottom:2rem; }
+    .evidence-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.5rem; }
+    .evidence-item { background:var(--navy-light); border:1px solid rgba(201,162,39,.25); border-radius:6px; overflow:hidden; }
+    .evidence-item img { width:100%; height:200px; object-fit:cover; }
+    .evidence-content { padding:1.25rem; }
+    .evidence-content h3 { font-size:1.15rem; color:var(--gold); margin-bottom:.5rem; }
+    .tag { display:inline-block; background:rgba(201,162,39,.15); color:var(--gold-light); font-size:.75rem; padding:.2rem .5rem; border-radius:3px; margin-bottom:.75rem; }
+    footer { background:#070e18; text-align:center; padding:2rem; margin-top:4rem; font-size:.85rem; color:var(--text-muted); border-top:1px solid rgba(201,162,39,.2); }
+    @media (max-width:700px) { header { flex-direction:column; gap:1rem; text-align:center; } nav a { margin:0 .75rem; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-area">
+      <img src="logo.jpg" alt="FB-VYDE Logo">
+      <div class="logo-text"><h1>FB-VYDE</h1><p>Investigative Agency</p></div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="updates.html">Case Updates</a>
+      <a href="suspects.html">Persons</a>
+      <a href="evidence.html">Evidence</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Evidence</h2>
+    <p class="intro">Released only. The rest is in the page source until its day.</p>
+
+    <div class="evidence-grid">
+      <article class="evidence-item">
+        <img src="blackwood-house.jpg" alt="Blackwood House">
+        <div class="evidence-content">
+          <span class="tag">Released · October 14</span>
+          <h3>Blackwood House</h3>
+          <p>Empty since November 1974. Locked study on the second floor. Iron gate that does not quite close.</p>
+        </div>
+      </article>
+      <article class="evidence-item">
+        <img src="marcus.jpg" alt="Marcus Hale">
+        <div class="evidence-content">
+          <span class="tag">Released · October 20</span>
+          <h3>Marcus Hale</h3>
+          <p>He has the documents. They name the holder of the key, not a person. He has not shown the key.</p>
+        </div>
+      </article>
+      <article class="evidence-item">
+        <img src="board.jpg" alt="Investigation board">
+        <div class="evidence-content">
+          <span class="tag">Released · The room</span>
+          <h3>The board</h3>
+          <p>Physical red-string board in the back offices. Pages are added as they are released.</p>
+        </div>
+      </article>
+    </div>
+
+    <!-- FUTURE: uncomment on the day each item is released
+    <div class="evidence-grid" style="margin-top:1.5rem;">
+      <article class="evidence-item">
+        <div class="evidence-content">
+          <span class="tag">Held · Study papers</span>
+          <h3>1974 papers</h3>
+          <p>Estate summary. Sealed note. Trust memorandum. Heir is the holder of the key.</p>
+        </div>
+      </article>
+      <article class="evidence-item">
+        <div class="evidence-content">
+          <span class="tag">Held · Chart</span>
+          <h3>Family chart</h3>
+          <p>Clara’s box says no children. Irene and Colin added later, in a different hand.</p>
+        </div>
+      </article>
+      <article class="evidence-item">
+        <div class="evidence-content">
+          <span class="tag">Held · Statements</span>
+          <h3>Two statements, two reports</h3>
+          <p>Deposit. Withdrawal. The reports leave the withdrawal off.</p>
+        </div>
+      </article>
+      <article class="evidence-item">
+        <img src="ticket.jpg" alt="Parking citation">
+        <div class="evidence-content">
+          <span class="tag">Held · October 26</span>
+          <h3>Friday night parking citation</h3>
+          <p>Found with the later evidence. Timing does not match “home all weekend.”</p>
+        </div>
+      </article>
+      <article class="evidence-item">
+        <div class="evidence-content">
+          <span class="tag">Held · With the body</span>
+          <h3>The key and the password</h3>
+          <p>The key answers whether he is the heir. The password opens only the mail.</p>
+        </div>
+      </article>
+    </div>
+    -->
+  </div>
+
+  <footer>
+    <p>FB-VYDE &nbsp;•&nbsp; Case File 26-HALE &nbsp;•&nbsp; Fictional investigation</p>
+  </footer>
+</body>
+</html>
