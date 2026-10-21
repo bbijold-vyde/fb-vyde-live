@@ -10,6 +10,7 @@
   <style>
     :root { --navy:#0a1628; --navy-light:#132337; --gold:#c9a227; --gold-light:#e6c56e; --cream:#f5f1e8; --text:#e8e4d9; --text-muted:#a8a39a; --ink:#1a1a1a; --paper:#f4efe4; }
     * { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-padding-top:110px; }
     body { font-family:'Inter',system-ui,sans-serif; background:var(--navy); color:var(--text); line-height:1.6; }
     a { color:var(--gold-light); text-decoration:none; }
     a:hover { text-decoration:underline; }
@@ -23,7 +24,7 @@
     .container { max-width:920px; margin:2rem auto; padding:0 1.5rem 1rem; }
     .container > h2 { font-family:'Playfair Display',serif; font-size:2.2rem; color:var(--cream); margin-bottom:.5rem; }
     .intro { color:var(--text-muted); margin-bottom:1.5rem; }
-    .sheet { background:var(--paper); color:var(--ink); font-family:"Libre Baskerville",Georgia,serif; padding:28px 36px 36px; margin:0 0 2rem; box-shadow:0 10px 40px rgba(0,0,0,.28); }
+    .sheet { background:var(--paper); color:var(--ink); font-family:"Libre Baskerville",Georgia,serif; padding:28px 36px 36px; margin:0 0 2rem; box-shadow:0 10px 40px rgba(0,0,0,.28); scroll-margin-top:110px; }
     .kicker, .mast-sub { display:flex; justify-content:space-between; gap:.75rem; font-family:"Old Standard TT",Georgia,serif; font-size:13px; letter-spacing:.06em; text-transform:uppercase; }
     .kicker { border-bottom:1px solid var(--ink); padding-bottom:6px; }
     .masthead { text-align:center; border-bottom:3px solid var(--ink); padding:8px 0; }
@@ -71,7 +72,42 @@
 
   <div class="container">
     <h2>News</h2>
-    <p class="intro">The County Register. Released issues only.</p>
+    <p class="intro">The County Register. Released issues only. Newest first.</p>
+
+    <article class="sheet" id="fortune">
+      <div class="kicker">
+        <span>Vol. CXII No. 285</span>
+        <span>County edition</span>
+        <span>Wednesday, October 21, 2026</span>
+      </div>
+      <header class="masthead">
+        <h1>The County Register</h1>
+        <div class="mast-sub">
+          <span>Since 1874</span>
+          <span>Local news &amp; notices</span>
+          <span>Price: one good story</span>
+        </div>
+      </header>
+      <p class="banner">From the files · Blackwood House</p>
+      <h2 class="headline">How Eleanor Blackwood<br>Made the Money</h2>
+      <p class="deck">A railroad spur, a steel contract, and a woman who did not sell.</p>
+      <p class="byline">By the Register desk | County Road</p>
+      <div class="photo">
+        <img src="eleanor.jpg" alt="Eleanor Blackwood">
+      </div>
+      <p class="caption">Eleanor Blackwood, 1912–1974. She did not found the fortune. She was the one who kept it.</p>
+      <div class="cols">
+        <p class="drop">The money did not start with Eleanor.</p>
+        <p>It started with her father, Silas Blackwood, in the years when a man could still own a piece of the road. Silas sold plate and rail to the lines that were consolidating west of the river. He did not run a railroad. He owned the spur that fed one, and the scrap yard that fed the mill that fed the spur. In a laissez-faire county, that was enough.</p>
+        <p>By 1910 the Blackwood name was on sidings, on a small plate works, and on the land along the old county road. The house went up in 1911. Eleanor was born in it the next year.</p>
+        <p>She was not a Carnegie and she was not a Ford. She did not invent a system. What she did, from the middle of the 1930s on, was refuse to sell the pieces her father had gathered. When the lines merged, she kept the spur. When the mill wanted the yard, she leased it and kept the ground. During the war years the plate works ran double shifts on government contract. She took the cash. She did not take a partner.</p>
+        <p>After the war she sold the works and kept the land. She put the proceeds into bearer bonds and into two parcels west of town. People in the county called it a retreat. It was a consolidation. By the early 1960s the operating companies were gone. What remained was the house, the bonds, and the value of land that had once been a right of way.</p>
+        <p>She did not publish a figure. She did not file a will the county could finish. In November 1974 she died in the study on the second floor. The cash, the bonds, and the land went into the Blackwood Remainder Trust. The papers do not print a name. They name the person she gave the key.</p>
+        <p>That is the fortune Marcus Hale says is his. It is not a lost chest. It is what was left when a small industrial holding was turned into paper and ground, and then locked in a room.</p>
+        <p>The house is still empty. The key has still not been seen.</p>
+      </div>
+      <p class="note">Fictional notice for the Vyde Halloween investigation. Every name in this case is invented.</p>
+    </article>
 
     <article class="sheet" id="heir">
       <div class="kicker">
