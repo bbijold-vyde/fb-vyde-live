@@ -18,7 +18,8 @@
     .logo-area img { height:60px; }
     .logo-text h1 { font-family:'Playfair Display',serif; font-size:1.6rem; letter-spacing:1px; color:var(--gold); }
     .logo-text p { font-size:.75rem; color:var(--text-muted); letter-spacing:2px; text-transform:uppercase; }
-    nav a { margin-left:1.5rem; font-weight:500; }
+    nav { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:.35rem 1.1rem; }
+    nav a { font-weight:500; }
     .hero { max-width:1100px; margin:2rem auto; padding:0 1.5rem; }
     .breaking { background:var(--gold); color:var(--navy); display:inline-block; padding:.25rem .75rem; font-size:.75rem; font-weight:600; letter-spacing:1px; text-transform:uppercase; margin-bottom:1rem; }
     h2.article-title { font-family:'Playfair Display',serif; font-size:2.5rem; line-height:1.2; margin-bottom:.75rem; color:var(--cream); }
@@ -39,7 +40,7 @@
     .card p { font-size:.9rem; color:var(--text-muted); }
     .disclaimer { background:#1a2332; border-left:4px solid var(--gold); padding:1rem 1.25rem; margin:2rem auto; max-width:1100px; font-size:.85rem; color:var(--text-muted); }
     footer { background:#070e18; text-align:center; padding:2rem; margin-top:4rem; font-size:.85rem; color:var(--text-muted); border-top:1px solid rgba(201,162,39,.2); }
-    @media (max-width:700px) { header { flex-direction:column; gap:1rem; text-align:center; } nav a { margin:0 .75rem; } h2.article-title { font-size:2rem; } }
+    @media (max-width:700px) { header { flex-direction:column; gap:1rem; text-align:center; } nav { justify-content:center; } h2.article-title { font-size:2rem; } }
   </style>
 </head>
 <body>
@@ -50,6 +51,7 @@
     </div>
     <nav>
       <a href="index.html">Home</a>
+      <a href="news.html">News</a>
       <a href="updates.html">Case Updates</a>
       <a href="suspects.html">Persons</a>
       <a href="evidence.html">Evidence</a>
@@ -65,6 +67,7 @@
       <p>Blackwood House has been empty since Eleanor Blackwood died there in November 1974. The fortune was never paid out. Marcus Hale says it is his.</p>
       <p>He has now been inside the locked study. He brought out the 1974 documents. They do not print his name. They say the heir is the person Eleanor gave the key. He has not shown the key.</p>
       <p>He has engaged Vyde to keep the books and prepare the tax work. Given the size of the fortune, FB-VYDE has been asked to investigate whether he really is the heir.</p>
+      <p><a href="news.html#heir">Read the County Register article →</a></p>
       <p><a href="updates.html">Read the case updates →</a></p>
     </div>
   </main>
@@ -95,7 +98,7 @@
         <div class="card-content">
           <h4>October 20 — He has the documents</h4>
           <p>They name the holder of the key. He has not shown it. The books are at Vyde.</p>
-          <a href="updates.html">Case updates →</a>
+          <a href="news.html#heir">The article →</a>
         </div>
       </article>
       <article class="card">

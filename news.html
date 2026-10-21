@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News | FB-VYDE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Old+Standard+TT&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --navy:#0a1628; --navy-light:#132337; --gold:#c9a227; --gold-light:#e6c56e; --cream:#f5f1e8; --text:#e8e4d9; --text-muted:#a8a39a; --ink:#1a1a1a; --paper:#f4efe4; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:'Inter',system-ui,sans-serif; background:var(--navy); color:var(--text); line-height:1.6; }
+    a { color:var(--gold-light); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    header { background:var(--navy-light); border-bottom:2px solid var(--gold); padding:1rem 2rem; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:100; }
+    .logo-area { display:flex; align-items:center; gap:1rem; }
+    .logo-area img { height:60px; }
+    .logo-text h1 { font-family:'Playfair Display',serif; font-size:1.6rem; letter-spacing:1px; color:var(--gold); }
+    .logo-text p { font-size:.75rem; color:var(--text-muted); letter-spacing:2px; text-transform:uppercase; }
+    nav { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:.35rem 1.1rem; }
+    nav a { font-weight:500; }
+    .container { max-width:920px; margin:2rem auto; padding:0 1.5rem 1rem; }
+    .container > h2 { font-family:'Playfair Display',serif; font-size:2.2rem; color:var(--cream); margin-bottom:.5rem; }
+    .intro { color:var(--text-muted); margin-bottom:1.5rem; }
+    .sheet { background:var(--paper); color:var(--ink); font-family:"Libre Baskerville",Georgia,serif; padding:28px 36px 36px; margin:0 0 2rem; box-shadow:0 10px 40px rgba(0,0,0,.28); }
+    .kicker, .mast-sub { display:flex; justify-content:space-between; gap:.75rem; font-family:"Old Standard TT",Georgia,serif; font-size:13px; letter-spacing:.06em; text-transform:uppercase; }
+    .kicker { border-bottom:1px solid var(--ink); padding-bottom:6px; }
+    .masthead { text-align:center; border-bottom:3px solid var(--ink); padding:8px 0; }
+    .masthead h1 { font-family:'Playfair Display',Georgia,serif; font-size:58px; line-height:.9; margin:6px 0; color:var(--ink); }
+    .mast-sub { font-size:12px; border-top:1px solid var(--ink); padding-top:4px; text-transform:none; letter-spacing:0; }
+    .banner { text-align:center; letter-spacing:.18em; text-transform:uppercase; font-size:12px; margin:16px 0 8px; }
+    h2.headline { font-family:'Playfair Display',Georgia,serif; font-size:40px; line-height:1.02; text-align:center; margin:0 0 8px; color:var(--ink); }
+    .deck { text-align:center; font-style:italic; font-size:17px; margin:0 0 12px; }
+    .byline { text-align:center; font-size:12px; letter-spacing:.04em; text-transform:uppercase; margin-bottom:14px; }
+    .photo { text-align:center; margin:0 0 8px; }
+    .photo img { width:280px; height:340px; object-fit:cover; object-position:center 30%; filter:grayscale(.25) contrast(1.04); }
+    .photo.wide img { width:100%; height:auto; max-height:420px; object-fit:cover; object-position:center; }
+    .caption { font-size:12px; font-style:italic; border-bottom:1px solid var(--ink); padding-bottom:10px; margin-bottom:14px; }
+    .cols { column-count:3; column-gap:22px; font-size:13.5px; line-height:1.42; text-align:justify; }
+    .cols p { margin:0 0 10px; }
+    .drop::first-letter { font-family:'Playfair Display',Georgia,serif; float:left; font-size:52px; line-height:.8; padding-right:6px; }
+    .note { margin-top:16px; font-size:11px; font-style:italic; text-align:center; }
+    footer { background:#070e18; text-align:center; padding:2rem; margin-top:2rem; font-size:.85rem; color:var(--text-muted); border-top:1px solid rgba(201,162,39,.2); }
+    @media (max-width:800px) {
+      header { flex-direction:column; gap:1rem; text-align:center; }
+      nav { justify-content:center; }
+      .sheet { padding:18px 16px 24px; }
+      .masthead h1 { font-size:40px; }
+      h2.headline { font-size:30px; }
+      .cols { column-count:1; }
+      .kicker, .mast-sub { flex-direction:column; align-items:center; text-align:center; }
+      .photo img, .photo.wide img { width:100%; height:auto; max-height:320px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-area">
+      <img src="logo.jpg" alt="FB-VYDE Logo">
+      <div class="logo-text"><h1>FB-VYDE</h1><p>Investigative Agency</p></div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="news.html">News</a>
+      <a href="updates.html">Case Updates</a>
+      <a href="suspects.html">Persons</a>
+      <a href="evidence.html">Evidence</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>News</h2>
+    <p class="intro">The County Register. Released issues only.</p>
+
+    <article class="sheet" id="heir">
+      <div class="kicker">
+        <span>Vol. CXII No. 284</span>
+        <span>County edition</span>
+        <span>Monday, October 19, 2026</span>
+      </div>
+      <header class="masthead">
+        <h1>The County Register</h1>
+        <div class="mast-sub">
+          <span>Since 1874</span>
+          <span>Local news &amp; notices</span>
+          <span>Price: one good story</span>
+        </div>
+      </header>
+      <p class="banner">Inheritance · Blackwood House</p>
+      <h2 class="headline">Marcus Hale Named Heir<br>to Blackwood Fortune</h2>
+      <p class="deck">Legal documents found in the locked study. Family reacts. Books going to Vyde.</p>
+      <p class="byline">By the Register desk | County Road</p>
+      <div class="photo">
+        <img src="marcus.jpg" alt="Marcus Hale">
+      </div>
+      <p class="caption">Marcus Hale, who says he is Clara Blackwood’s son. He opened the locked study and brought out the 1974 documents. They name the holder of the key, not a person.</p>
+      <div class="cols">
+        <p class="drop">Marcus Hale has the documents.</p>
+        <p>The man who would not give an interview has been inside Blackwood House. He opened the locked study on the second floor, found the tin box behind the desk panel, and brought out the legal documents Eleanor Blackwood left there in November 1974. Those papers do not print his name. They say the heir is the person she gave the key.</p>
+        <p>Hale says he is that person. He says Eleanor gave him the key on the porch when he was a boy, and that he used it on the study door. He has not shown the key. The family chart, drawn before Clara had a child, still lists her as having none. Irene Blackwood has already said that page is the proof he is not the heir.</p>
+        <p>The inheritance is no longer unclaimed, if his account holds.</p>
+        <p>The documents match the instruction Eleanor wrote and never filed: the cash, the bearer bonds, and the value of the outlying land were to wait for the holder of the key. Hale says he is that heir. He has confirmed the trust is still open. He has not published a figure. People familiar with the file place it in the low seven figures.</p>
+        <p>Hale has engaged Vyde to keep the books and prepare the tax work. He has not authorized anyone else to move the funds. He told the Register he will bring the documents to the firm himself.</p>
+        <p>The family did not take the news quietly.</p>
+        <p>Irene Blackwood, added to the chart in a later hand, called the find a performance. “He is not on the tree. Clara’s box says no children,” she said. “I do not accept that a story about a key makes him the heir. If those documents are real, I want them read in the open, not in some accountant’s office.”</p>
+        <p>Colin Blackwood, who has written for years asking that the trust be declared a dead letter, said the house should have been opened long ago. “I asked for the study door to be opened. I did not ask for Marcus Hale to be the one holding the key,” he said. “Declare the trust. Show the papers. If he is the heir, the papers will survive a reading. If they will not, then we are back where we were.”</p>
+        <p>Helen Voss, who married into the family, was the only one who did not ask for a public reading. “Eleanor did not trust paper, and she did not trust a crowd,” she said. “If Marcus has the documents, the fight is no longer at the house. It is wherever those books are going to be kept. I know people who can live with a private arrangement. Not everyone needs a headline.”</p>
+        <p>Hale declined to answer them. The documents are in his possession. He says the key names him, and the books will be opened at Vyde. The house is still empty. The key has still not been seen.</p>
+      </div>
+      <p class="note">Fictional notice for the Vyde Halloween investigation. Every name in this case is invented.</p>
+    </article>
+
+    <article class="sheet" id="unclaimed">
+      <div class="kicker">
+        <span>Vol. CXII No. 280</span>
+        <span>County edition</span>
+        <span>Wednesday, October 14, 2026</span>
+      </div>
+      <header class="masthead">
+        <h1>The County Register</h1>
+        <div class="mast-sub">
+          <span>Since 1874</span>
+          <span>Local news &amp; notices</span>
+          <span>Price: one good story</span>
+        </div>
+      </header>
+      <p class="banner">Inheritance · Blackwood House</p>
+      <h2 class="headline">Blackwood Inheritance<br>Still Unclaimed</h2>
+      <p class="deck">House empty since 1974. Fortune never paid out. The family is still arguing.</p>
+      <p class="byline">By the Register desk | County Road</p>
+      <div class="photo wide">
+        <img src="blackwood-house.jpg" alt="Blackwood House">
+      </div>
+      <p class="caption">Blackwood House, on the old county road. Empty since Eleanor Blackwood died there in November 1974. One upper window is the locked study.</p>
+      <div class="cols">
+        <p class="drop">Blackwood House is still empty.</p>
+        <p>It stands on the old county road west of town, three stories of stone, a locked study on the second floor, an iron gate that does not quite close. Eleanor Blackwood died there in November 1974. The lights in the upper windows are a Halloween story now. The fortune is not.</p>
+        <p>She did not leave the money in a way the county could finish. The cash, the bearer bonds, and the value of the outlying land were placed in the Blackwood Remainder Trust. The trust has never been paid out. The house has never been lived in. Fifty years on, the inheritance is still unclaimed.</p>
+        <p>The family has not been quiet about it.</p>
+        <p>Irene Blackwood says the land should have come to her side in 1974. She does not accept that a later claim can reopen it. She has never been inside the study.</p>
+        <p>Colin Blackwood has spent years writing to anyone who will answer. He wants the house opened and the trust declared finished. He calls the empty house a waste and the locked study a trick.</p>
+        <p>Helen Voss, who married into the family, keeps a quieter claim. She says the fight does not need a headline. She will not say whether she has tried the study door.</p>
+        <p>And there is Marcus Hale, who says the fortune is his. He has not filed a letter. He has not given an interview. People in town say he has been out on the county road, and that he is the only one of them who is not afraid of the house.</p>
+        <p>No documents have been produced. No one has opened the trust. The inheritance sits where Eleanor left it.</p>
+        <p>FB-VYDE is opening the file. The question is whether Marcus Hale really is the heir. Join the investigation and help us find out. What surfaces will be shared. If the claim holds, the case changes. If it does not, someone else has been waiting.</p>
+        <p>Join in the FB-VYDE channel. Help us discover if Marcus really is the heir.</p>
+      </div>
+      <p class="note">Fictional notice for the Vyde Halloween investigation. Every name in this case is invented.</p>
+    </article>
+  </div>
+
+  <footer>
+    <p>FB-VYDE &nbsp;•&nbsp; Case File 26-HALE &nbsp;•&nbsp; Fictional investigation</p>
+  </footer>
+</body>
+</html>

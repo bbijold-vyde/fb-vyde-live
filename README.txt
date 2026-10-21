@@ -2,6 +2,7 @@ FB-VYDE live site — drop this folder on Netlify
 
 Current as of October 21, 2026
   index.html      Heir announced. Books at Vyde. Is he the heir?
+  news.html       County Register. October 14 invite and October 19 heir article.
   updates.html    October 14 invite and October 20 heir article.
   suspects.html   Marcus, Irene, Colin, Helen, Eleanor.
   evidence.html   House, Marcus, the board.
