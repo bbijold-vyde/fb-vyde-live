@@ -5,11 +5,11 @@ Current as of October 22, 2026
   news.html       County Register. October 22 Colin and the fortune file, October 21 Eleanor, October 19 heir, October 14 invite.
   updates.html    October 22 Colin interview and what the fortune is. Earlier articles below.
   suspects.html   Marcus, Irene, Colin, Helen, Eleanor.
-  evidence.html   House, Marcus, the board.
+  evidence.html   House, Marcus, the board, October 22 deposit statement.
   fortune.html    Blackwood Fortune private office. Linked from Evidence. Opens in a new tab. Every password is refused.
 
 Future items are in the HTML, commented out. Search for FUTURE.
 Uncomment a block on the day it is released, then drop the folder again.
 
 Not in this drop yet
-  Study papers, family chart, porch photo, bank statements, reports, mail, key.
+  Study papers, family chart, porch photo, reports, mail, key.
