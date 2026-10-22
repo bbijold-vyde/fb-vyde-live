@@ -2,7 +2,7 @@ FB-VYDE live site — drop this folder on Netlify
 
 Current as of October 22, 2026
   index.html      Latest article leads. Colin asks to open the house.
-  news.html       County Register. October 21 fortune, October 19 heir, October 14 invite.
+  news.html       County Register. October 22 Colin and the fortune file, October 21 Eleanor, October 19 heir, October 14 invite.
   updates.html    October 22 Colin interview and what the fortune is. Earlier articles below.
   suspects.html   Marcus, Irene, Colin, Helen, Eleanor.
   evidence.html   House, Marcus, the board.
