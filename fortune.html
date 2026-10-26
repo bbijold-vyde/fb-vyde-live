@@ -57,6 +57,7 @@
     .coding li { list-style:none; display:flex; justify-content:space-between; gap:1rem; padding:.45rem 0; border-top:1px solid var(--line); font-size:.9rem; }
     .coding li strong { font-weight:500; }
     .statement { padding:1.5rem 1.6rem 1.25rem; }
+    .statement.later { margin-top:1.25rem; }
     .bank-name { font-size:1.35rem; font-weight:600; letter-spacing:.04em; }
     .bank-sub { display:flex; justify-content:space-between; gap:1rem; color:var(--muted); font-size:.82rem; padding-bottom:.55rem; border-bottom:3px solid #1d3f73; }
     .meta { width:100%; margin:1rem 0 1.1rem; font-size:.92rem; }
@@ -83,6 +84,63 @@
     .gate button:hover { background:#2c261f; }
     .refusal { margin-top:1rem; color:#7a3030; font-size:.92rem; }
     @media (max-width:600px) { .gate h1 { font-size:2.6rem; } }
+    .home { min-height:100vh; display:flex; align-items:center; justify-content:center; background:radial-gradient(circle at top, #2a241c 0%, #100e0c 55%); color:#f6f1e8; padding:2rem 1rem; }
+    .home-card { width:min(760px, 100%); }
+    .home h1 { font-weight:500; font-size:3.2rem; line-height:1; margin:.3rem 0 1.4rem; }
+    .choices { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+    .choices button { text-align:left; background:#f6f1e8; color:var(--ink); border:0; padding:1.45rem 1.3rem 1.3rem; cursor:pointer; box-shadow:0 18px 40px rgba(0,0,0,.28); }
+    .choices button:hover { background:#fff; }
+    .choices button:focus-visible { outline:2px solid var(--gold); outline-offset:3px; }
+    .choices strong { display:block; font-size:1.45rem; font-weight:600; margin-bottom:.4rem; }
+    .choices span { display:block; color:var(--muted); font-size:.92rem; line-height:1.4; }
+    .threads button { display:block; width:100%; }
+    .threads .when { display:block; font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:.68rem; letter-spacing:.04em; color:#9c9284; margin-bottom:.12rem; }
+    .threads .who-line { display:block; }
+    .threads .addr-line { display:block; font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:.68rem; color:#9c9284; margin-top:.12rem; }
+    .letter { padding:1.25rem 1.5rem 2rem; max-width:740px; }
+    .letter h2 { font-size:1.35rem; font-weight:600; }
+    .letter .route { color:var(--muted); font-size:.88rem; margin:.25rem 0 1rem; }
+    .msg { padding:.95rem 0; border-top:1px solid var(--line); }
+    .msg .who { font-size:.95rem; font-weight:600; letter-spacing:0; text-transform:none; color:var(--ink); margin-bottom:.15rem; }
+    .msg .addr { font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:.78rem; color:var(--muted); margin-bottom:.15rem; }
+    .msg .to { font-size:.82rem; color:var(--muted); margin-bottom:.45rem; }
+    .msg.marcus { margin-left:1.75rem; }
+    .msg p { line-height:1.55; }
+    .reply { margin-top:1.35rem; }
+    .reply label { display:block; font-size:.68rem; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); margin-bottom:.4rem; }
+    .reply textarea { width:100%; min-height:4.75rem; resize:vertical; background:transparent; color:var(--ink); border:0; border-bottom:1px solid #c9bfae; padding:.55rem 0; font:inherit; border-radius:0; }
+    .reply textarea:focus { outline:none; border-bottom-color:var(--gold); }
+    .reply button { margin-top:1rem; background:var(--ink); color:#f6f1e8; border:0; padding:.75rem 1.2rem; letter-spacing:.18em; text-transform:uppercase; font-size:.72rem; cursor:pointer; }
+    .reply button:hover { background:#2c261f; }
+    #messages.app { grid-template-columns:minmax(268px, 340px) 1fr; height:100vh; overflow:hidden; }
+    #messages .rail { height:100vh; overflow:hidden; }
+    #messages .threads { flex:1; min-height:0; overflow:auto; flex-direction:column; }
+    #messages .workspace { height:100vh; overflow:auto; }
+    .file .login { display:inline-block; margin-top:.2rem; font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:.74rem; color:#cfc6b8; }
+    .threads .subject-line { display:block; margin-top:.28rem; font-size:.84rem; line-height:1.35; color:#f4efe6; }
+    .threads .snip { display:block; margin-top:.18rem; font-size:.75rem; line-height:1.35; color:#9c9284; }
+    .letter { margin:1rem 1.25rem 2rem; max-width:740px; background:var(--paper); border:1px solid #d9d0c2; box-shadow:0 10px 28px rgba(40,32,20,.06); }
+    .letter h2 { font-size:1.28rem; line-height:1.35; }
+    .badge { font-size:.68rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; margin-bottom:.35rem; }
+    .badge.sent { color:#8a6a2f; }
+    .badge.received { color:var(--in); }
+    .msg .when { font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:.75rem; color:var(--muted); margin-bottom:.55rem; }
+    .msg .subject { font-weight:600; margin-bottom:.45rem; }
+    .msg .to span, .msg .addr { font-family:"IBM Plex Mono",ui-monospace,monospace; }
+    .msg .to span { margin-left:.35rem; }
+    .msg .body p { margin-top:.75rem; }
+    .msg .body p:first-child { margin-top:0; }
+    .msg .sign span { display:block; color:var(--muted); }
+    .msg.marcus { margin-left:0; padding-left:.15rem; }
+    #messages .workspace { background:var(--workspace); }
+    @media (max-width:800px) {
+      .choices { grid-template-columns:1fr; }
+      .home h1 { font-size:2.5rem; }
+      .letter { margin:.75rem .75rem 1.5rem; padding:1rem .9rem 1.5rem; }
+      #messages.app { height:auto; overflow:visible; grid-template-columns:1fr; }
+      #messages .rail, #messages .workspace { height:auto; overflow:visible; }
+      #messages .threads { overflow:visible; flex:none; }
+    }
     @media (max-width:800px) {
       .app { grid-template-columns:1fr; }
       .rail { padding:1rem; }
@@ -115,16 +173,32 @@
   <div class="gate" id="gate">
     <main>
       <p class="mark">Private office</p>
-      <h1>Blackwood<br>Books</h1>
+      <h1>Blackwood</h1>
       <form id="door">
         <label for="who">Name</label>
         <input id="who" name="who" autocomplete="off">
         <label for="password">Password</label>
         <input id="password" name="password" type="password" autocomplete="off">
         <button type="submit">Enter</button>
-        <p id="refusal" class="refusal" role="alert" hidden>Access refused. The books remain sealed.</p>
+        <p id="refusal" class="refusal" role="alert" hidden>Access refused. The office remains sealed.</p>
       </form>
     </main>
+  </div>
+  <div class="home" id="home" hidden>
+    <div class="home-card">
+      <p class="mark">Private office</p>
+      <h1>Blackwood</h1>
+      <div class="choices">
+        <button type="button" data-room="books">
+          <strong>The books</strong>
+          <span>The register and the October statement.</span>
+        </button>
+        <button type="button" data-room="messages">
+          <strong>Messages</strong>
+          <span>Mail on the Hale file.</span>
+        </button>
+      </div>
+    </div>
   </div>
   <div class="app" id="books" hidden>
     <aside class="rail">
@@ -134,6 +208,7 @@
       </div>
       <p class="file">File · Marcus Hale<br>Blackwood Remainder<br>Personal checking ····4418</p>
       <nav aria-label="Books">
+        <button type="button" data-room="home">Main menu</button>
         <button type="button" data-view="register" aria-current="page">Register</button>
         <button type="button" data-view="statement">Bank statement</button>
       </nav>
@@ -146,7 +221,7 @@
           <h2 id="view-title">Bank register</h2>
           <p id="view-note">Meridian County Bank · County Road branch · Marcus Hale</p>
         </div>
-        <p class="period" id="view-period">Sep 16 – Oct 15, 2026</p>
+        <p class="period" id="view-period">Sep 16 – Oct 25, 2026</p>
       </header>
 
       <section class="panel" data-panel="register">
@@ -209,10 +284,28 @@
                 <td class="money dep"></td>
                 <td class="money bal">8,642,385.18</td>
               </tr>
+              <tr>
+                <td class="num">Oct 17</td>
+                <td><span class="payee">Vyde</span><span class="memo">November bookkeeping · Monthly</span></td>
+                <td class="user">B*****@vyde.io</td>
+                <td>Bookkeeping</td>
+                <td class="money pay out">249.00</td>
+                <td class="money dep"></td>
+                <td class="money bal">8,642,136.18</td>
+              </tr>
+              <tr>
+                <td class="num">Oct 21</td>
+                <td><span class="payee">Meridian County Bank</span><span class="memo">Wire fee</span></td>
+                <td class="user">J*****@vyde.io</td>
+                <td>Wire fee</td>
+                <td class="money pay out">35.00</td>
+                <td class="money dep"></td>
+                <td class="money bal">8,642,101.18</td>
+              </tr>
             </tbody>
           </table>
         </div>
-        <p class="fine line-note"><span>Five entries. The amounts are the amounts on the statement. The account names are the bookkeeper’s coding.</span><button type="button" class="quiet" data-view="deleted">Deleted</button></p>
+        <p class="fine line-note"><span>Seven entries. The amounts are the amounts from the bank. The account names are the bookkeeper’s coding.</span><button type="button" class="quiet" data-view="deleted">Deleted</button></p>
 
         <div class="coding">
           <article>
@@ -221,8 +314,8 @@
               <li><span>Opening deposit</span><strong class="money in">500.00</strong></li>
               <li><span>Estate distribution</span><strong class="money in">8,642,201.18</strong></li>
               <li><span>Recording fee</span><strong class="money out">42.00</strong></li>
-              <li><span>Bookkeeping</span><strong class="money out">249.00</strong></li>
-              <li><span>Wire fee</span><strong class="money out">25.00</strong></li>
+              <li><span>Bookkeeping</span><strong class="money out">498.00</strong></li>
+              <li><span>Wire fee</span><strong class="money out">60.00</strong></li>
             </ul>
           </article>
           <article>
@@ -230,8 +323,8 @@
             <ul>
               <li><span>Opening balance</span><strong class="money">0.00</strong></li>
               <li><span>Deposits</span><strong class="money in">8,642,701.18</strong></li>
-              <li><span>Payments</span><strong class="money out">316.00</strong></li>
-              <li><span>Book balance</span><strong class="money">8,642,385.18</strong></li>
+              <li><span>Payments</span><strong class="money out">600.00</strong></li>
+              <li><span>Book balance</span><strong class="money">8,642,101.18</strong></li>
             </ul>
           </article>
         </div>
@@ -310,6 +403,70 @@
           <a class="pdf" href="statement-deposit.pdf" target="_blank" rel="noopener noreferrer">Open the filed statement</a>
           <p class="fine">This statement is a fictional document for the Vyde Halloween investigation. Meridian County Bank does not exist. No real account is described.</p>
         </article>
+        <article class="sheet statement later">
+          <h3 class="bank-name">MERIDIAN COUNTY BANK</h3>
+          <div class="bank-sub">
+            <span>Personal and trust accounts · County Road branch</span>
+            <span>Statement</span>
+          </div>
+          <table class="meta">
+            <tbody>
+              <tr><th>Account</th><td>Marcus Hale</td><th>Number</th><td class="num">····4418</td></tr>
+              <tr><th>Type</th><td>Personal checking</td><th>Period</th><td>October 16 – October 25, 2026</td></tr>
+              <tr><th>Previous balance</th><td class="num">8,642,385.18</td><th>Page</th><td>1 of 1</td></tr>
+            </tbody>
+          </table>
+          <div class="scroll">
+            <table class="stmt-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Description</th>
+                  <th class="money">Withdrawals</th>
+                  <th class="money">Deposits</th>
+                  <th class="money">Balance</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="num">Oct 16</td>
+                  <td>Balance forward</td>
+                  <td class="money pay"></td>
+                  <td class="money dep"></td>
+                  <td class="money bal">8,642,385.18</td>
+                </tr>
+                <tr>
+                  <td class="num">Oct 17</td>
+                  <td>Vyde · November bookkeeping<span class="memo">Monthly</span></td>
+                  <td class="money pay">249.00</td>
+                  <td class="money dep"></td>
+                  <td class="money bal">8,642,136.18</td>
+                </tr>
+                <tr class="wire">
+                  <td class="num">Oct 21</td>
+                  <td>Outgoing wire<span class="memo">Ref B-WALK · beneficiary not printed</span></td>
+                  <td class="money pay">8,000,000.00</td>
+                  <td class="money dep"></td>
+                  <td class="money bal">642,136.18</td>
+                </tr>
+                <tr>
+                  <td class="num">Oct 21</td>
+                  <td>Meridian County Bank · wire fee</td>
+                  <td class="money pay">35.00</td>
+                  <td class="money dep"></td>
+                  <td class="money bal">642,101.18</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="totals">
+            <div><span>Previous balance</span><span class="money">8,642,385.18</span></div>
+            <div><span>Deposits</span><span class="money">0.00</span></div>
+            <div><span>Withdrawals</span><span class="money">8,000,284.00</span></div>
+            <div class="end"><span>Ending balance</span><span class="money">642,101.18</span></div>
+          </div>
+          <p class="fine">This statement is a fictional document for the Vyde Halloween investigation. Meridian County Bank does not exist. No real account is described.</p>
+        </article>
       </section>
 
       <section class="panel" data-panel="deleted" hidden>
@@ -329,7 +486,7 @@
               <tr class="deleted">
                 <td><span class="stamp">Deleted</span></td>
                 <td class="struck">Withdrawal</td>
-                <td>Removed from the register by the bookkeeper. Not on the September 16 – October 15 statement.</td>
+                <td>Oct 21 · Outgoing wire · Ref B-WALK · beneficiary not printed. Later marked removed. Not on the September 16 – October 15 statement.</td>
                 <td class="user">B*****@vyde.io</td>
                 <td>Cash ····4418</td>
                 <td class="money pay out struck">8,000,000.00</td>
@@ -340,12 +497,115 @@
       </section>
 
       <footer class="status">
-        <span>Reconciled to the statement</span>
-        <span>Book balance 8,642,385.18</span>
-        <span>Statement balance 8,642,385.18</span>
-        <span>Difference 0.00</span>
-        <span id="status-extra">Active register has no entries after October 15</span>
+        <span id="status-1">Register through October 25</span>
+        <span id="status-2">Book balance 8,642,101.18</span>
+        <span id="status-3">October 16–25 statement 642,101.18</span>
+        <span id="status-4">Difference 8,000,000.00</span>
+        <span id="status-extra">September 16 – October 15 statement still ties</span>
       </footer>
+    </div>
+  </div>
+  <div class="app" id="messages" hidden>
+    <aside class="rail">
+      <div>
+        <p class="mark">Vyde mail</p>
+        <h1>Messages</h1>
+      </div>
+      <p class="file">Signed in as M.Hale<br><span class="login">marcus.hale@vyde.io</span><br>Mail sent from this office</p>
+      <nav aria-label="Office">
+        <button type="button" data-room="home">Main menu</button>
+      </nav>
+      <nav class="threads" aria-label="Messages">
+        <button type="button" data-thread="oct3" aria-current="page"><span class="when">October 3</span><span class="who-line">To, bookkeeper</span><span class="addr-line">bookkeeper@vyde.io</span><span class="subject-line">Blackwood Remainder Trust wire — $8,642,201.18</span><span class="snip">I received a wire today from the Blackwood Remainder Trust.</span></button>
+        <button type="button" data-thread="oct6"><span class="when">October 6</span><span class="who-line">From, Benjamin</span><span class="addr-line">B*****@vyde.io</span><span class="subject-line">Re: Blackwood Remainder Trust wire</span><span class="snip">Thank you for reaching out, and thanks for your patience.</span></button>
+        <button type="button" data-thread="oct7"><span class="when">October 7</span><span class="who-line">From, Jenn</span><span class="addr-line">J*****@vyde.io</span><span class="subject-line">Intake appointment — Blackwood file</span><span class="snip">I saw your file come through and wanted to reach out personally.</span></button>
+        <button type="button" data-thread="oct8"><span class="when">October 8</span><span class="who-line">From, Braden</span><span class="addr-line">B*****@vyde.io</span><span class="subject-line">Your account is open</span><span class="snip">I've got your account set up on my end.</span></button>
+        <button type="button" data-thread="oct9"><span class="when">October 9</span><span class="who-line">From, Boston</span><span class="addr-line">B*****@vyde.io</span><span class="subject-line">Portal showing blank line under deposit</span><span class="snip">The portal is showing the deposit and then a blank line underneath it.</span></button>
+        <button type="button" data-thread="oct10"><span class="when">October 10</span><span class="who-line">From, Kaylan</span><span class="addr-line">K*****@vyde.io</span><span class="subject-line">One account only</span><span class="snip">One account. Do not open another.</span></button>
+        <button type="button" data-thread="oct13"><span class="when">October 13</span><span class="who-line">From, Will</span><span class="addr-line">W*****@vyde.io</span><span class="subject-line">Post the deposit</span><span class="snip">It is mine. Post it.</span></button>
+        <button type="button" data-thread="oct14"><span class="when">October 14</span><span class="who-line">To, Danielle</span><span class="addr-line">D*****@vyde.io</span><span class="subject-line">Press inquiry — Blackwood House</span><span class="snip">We've had a couple of inquiries come in about the Blackwood House story.</span></button>
+        <button type="button" data-thread="oct16"><span class="when">October 16</span><span class="who-line">To, Finn</span><span class="addr-line">F*****@vyde.io</span><span class="subject-line">Deposit still in holding</span><span class="snip">The large deposit from early October is still sitting in a holding line.</span></button>
+        <button type="button" data-thread="oct17"><span class="when">October 17</span><span class="who-line">From, Kiana</span><span class="addr-line">K*****@vyde.io</span><span class="subject-line">November billing — $249</span><span class="snip">Your November bookkeeping charge of $249 has posted.</span></button>
+        <button type="button" data-thread="oct20"><span class="when">October 20</span><span class="who-line">To, Jonathan</span><span class="addr-line">J*****@vyde.io</span><span class="subject-line">October statement — question</span><span class="snip">I pulled your October bank statement for the file.</span></button>
+        <button type="button" data-thread="oct21"><span class="when">October 21</span><span class="who-line">To, Patricia</span><span class="addr-line">P*****@vyde.io</span><span class="subject-line">Call from someone claiming to be family</span><span class="snip">A woman called asking if you'd been in to the office.</span></button>
+        <button type="button" data-thread="oct23"><span class="when">October 23 · 4:12 p.m.</span><span class="who-line">To, bookkeeper</span><span class="addr-line">bookkeeper@vyde.io</span><span class="subject-line">Tonight</span><span class="snip">I'm coming in tonight.</span></button>
+      </nav>
+    </aside>
+    <div class="workspace">
+      <article class="letter" data-letter="oct3">
+        <h2>Blackwood Remainder Trust wire — $8,642,201.18</h2>
+        <p class="route">Sent from this office</p>
+        <div class="msg marcus"><p class="badge sent">Sent</p><p class="when">October 3, 2026</p><p class="who">From, Marcus Hale</p><p class="addr">marcus.hale@vyde.io</p><p class="to">To, bookkeeper@vyde.io</p><div class="body"><p>Hi,</p><p>I received a wire today from the Blackwood Remainder Trust in the amount of eight million, six hundred forty-two thousand, two hundred one dollars and eighteen cents. It landed in my personal checking, which I understand may not be the right place for it, but the trust is closed and this is where it went.</p><p>I'd like it posted to my account under my name. Can you tell me who will be handling my file? I want to make sure whoever it is knows the source of the funds before anything moves.</p><p class="sign">Thanks,<br>Marcus Hale</p></div></div>
+        <form class="reply"><label for="reply-oct3">From, Marcus · To, bookkeeper</label><textarea id="reply-oct3" rows="4" autocomplete="off"></textarea><button type="submit">Reply</button></form>
+      </article>
+      <article class="letter" data-letter="oct6" hidden>
+        <h2>Re: Blackwood Remainder Trust wire</h2>
+        <div class="msg staff"><p class="badge received">Received</p><p class="when">October 6, 2026</p><p class="who">From, Benjamin</p><p class="addr">B*****@vyde.io</p><p class="to">To, Marcus Hale <span>marcus.hale@vyde.io</span></p><div class="body"><p>Hi Marcus,</p><p>Thank you for reaching out, and thanks for your patience while we got your information into our system. My name is Benjamin and I'm one of the bookkeepers here at Vyde. I'm happy to help you get this sorted.</p><p>You mentioned the wire came into your personal checking — that's totally fine to start, we see that a lot with estate distributions. The main thing we'll need from you is either the trust close letter or the wire confirmation from your bank so we can document where the funds originated. Once we have that, posting the deposit is straightforward.</p><p>Is there a good time this week for a quick call, or would you rather just reply with the document?</p><p class="sign">Best,<br>Benjamin<br><span>Bookkeeper, Vyde Tax and Accounting</span></p></div></div>
+        <form class="reply"><label for="reply-oct6">From, Marcus · To, Benjamin</label><textarea id="reply-oct6" rows="4" autocomplete="off"></textarea><button type="submit">Reply</button></form>
+      </article>
+      <article class="letter" data-letter="oct7" hidden>
+        <h2>Intake appointment — Blackwood file</h2>
+        <div class="msg staff"><p class="badge received">Received</p><p class="when">October 7, 2026</p><p class="who">From, Jenn</p><p class="addr">J*****@vyde.io</p><p class="to">To, Marcus Hale <span>marcus.hale@vyde.io</span></p><div class="body"><p>Hi Mr. Hale,</p><p>This is Jenn from the front office at Vyde. I saw your file come through and wanted to reach out personally because accounts of this size usually go smoother when we do a quick in-person intake.</p><p>We like to sit down, walk through what you're expecting from us, and make sure the right people are on your team from day one. It also gives you a chance to ask anything you're wondering about before the work starts.</p><p>Would sometime next week work? I'm flexible most mornings if that helps.</p><p class="sign">Looking forward to hearing from you,<br>Jenn<br><span>Office Manager</span></p></div></div>
+        <form class="reply"><label for="reply-oct7">From, Marcus · To, Jenn</label><textarea id="reply-oct7" rows="4" autocomplete="off"></textarea><button type="submit">Reply</button></form>
+      </article>
+      <article class="letter" data-letter="oct8" hidden>
+        <h2>Your account is open</h2>
+        <div class="msg staff"><p class="badge received">Received</p><p class="when">October 8, 2026</p><p class="who">From, Braden</p><p class="addr">B*****@vyde.io</p><p class="to">To, Marcus Hale <span>marcus.hale@vyde.io</span></p><div class="body"><p>Hi Marcus,</p><p>Braden here. I've got your account set up on my end — account number and login are in your portal if you need them.</p><p>One thing I'm missing is your file. The trust documents, the wire confirmation, anything from the county or the estate. Can you upload those to the portal when you get a chance? I don't want to post anything until I've seen the source paperwork.</p><p>Also, just a heads up — we don't keep keys or physical items at the office. If you have anything like that for the Blackwood property, best to hold onto it yourself.</p><p class="sign">Talk soon,<br>Braden</p></div></div>
+        <form class="reply"><label for="reply-oct8">From, Marcus · To, Braden</label><textarea id="reply-oct8" rows="4" autocomplete="off"></textarea><button type="submit">Reply</button></form>
+      </article>
+      <article class="letter" data-letter="oct9" hidden>
+        <h2>Portal showing blank line under deposit</h2>
+        <div class="msg marcus"><p class="badge sent">Sent</p><p class="when">October 9, 2026</p><p class="who">From, Marcus Hale</p><p class="addr">marcus.hale@vyde.io</p><p class="to">To, Boston <span>B*****@vyde.io</span></p><div class="body"><p>The portal is showing the deposit and then a blank line underneath it. That's not how it should look. Someone needs to look at that entry before it posts.</p><p>Who can edit it?</p></div></div>
+        <div class="msg staff"><p class="badge received">Received</p><p class="subject">Re: Portal showing blank line under deposit</p><p class="when">October 9, 2026</p><p class="who">From, Boston</p><p class="addr">B*****@vyde.io</p><p class="to">To, Marcus Hale <span>marcus.hale@vyde.io</span></p><div class="body"><p>Hi Marcus,</p><p>Thanks for flagging that — I took a look and I can see what you're describing. The blank line under the deposit does look off, and you're right that it shouldn't be sitting there.</p><p>Here's the thing though: I can see the display issue but I can't actually edit entries on the books. That's above my access level. Anyone with bookkeeping permissions on your file would be able to fix it.</p><p>I'd recommend reaching out to whoever Braden assigned as your primary bookkeeper and having them take a look. They'll be able to see why that line is blank and clear it up.</p><p class="sign">Sorry I can't do more on my end,<br>Boston<br><span>Software Developer</span></p></div></div>
+        <form class="reply"><label for="reply-oct9">From, Marcus · To, Boston</label><textarea id="reply-oct9" rows="4" autocomplete="off"></textarea><button type="submit">Reply</button></form>
+      </article>
+      <article class="letter" data-letter="oct10" hidden>
+        <h2>One account only</h2>
+        <div class="msg marcus"><p class="badge sent">Sent</p><p class="when">October 10, 2026</p><p class="who">From, Marcus Hale</p><p class="addr">marcus.hale@vyde.io</p><p class="to">To, Kaylan <span>K*****@vyde.io</span></p><div class="body"><p>One account. Do not open another. The trust is closed.</p></div></div>
+        <div class="msg staff"><p class="badge received">Received</p><p class="subject">Re: One account only</p><p class="when">October 10, 2026</p><p class="who">From, Kaylan</p><p class="addr">K*****@vyde.io</p><p class="to">To, Marcus Hale <span>marcus.hale@vyde.io</span></p><div class="body"><p>Hi Marcus,</p><p>No problem at all — I've noted that you want a single account on file and I'm closing out the note about opening a second one. You won't get any more emails from me about it.</p><p>If anything changes or you ever want to revisit that, just let us know. We're here if you need anything.</p><p class="sign">Have a great day,<br>Kaylan<br><span>Customer Service Manager</span></p></div></div>
+        <form class="reply"><label for="reply-oct10">From, Marcus · To, Kaylan</label><textarea id="reply-oct10" rows="4" autocomplete="off"></textarea><button type="submit">Reply</button></form>
+      </article>
+      <article class="letter" data-letter="oct13" hidden>
+        <h2>Post the deposit</h2>
+        <div class="msg marcus"><p class="badge sent">Sent</p><p class="when">October 13, 2026</p><p class="who">From, Marcus Hale</p><p class="addr">marcus.hale@vyde.io</p><p class="to">To, Will <span>W*****@vyde.io</span></p><div class="body"><p>It is mine. Post it.</p></div></div>
+        <div class="msg staff"><p class="badge received">Received</p><p class="subject">Re: Post the deposit</p><p class="when">October 13, 2026</p><p class="who">From, Will</p><p class="addr">W*****@vyde.io</p><p class="to">To, Marcus Hale <span>marcus.hale@vyde.io</span></p><div class="body"><p>Hi Marcus,</p><p>Thanks for getting back to me. I want to make sure we classify this correctly before it hits your tax forms, because the difference matters a lot.</p><p>If the trust distributed to you as the beneficiary, that's one kind of income reporting. If you took a distribution yourself — meaning you initiated the move — that's treated differently, and the forms are not the same. Getting this wrong can create headaches at tax time that are hard to unwind.</p><p>So before we post anything, can you confirm which situation applies? Was this a distribution from the trust to you, or did you withdraw it?</p><p>Happy to hop on a call if that's easier.</p><p class="sign">Will<br><span>Accountant</span></p></div></div>
+        <form class="reply"><label for="reply-oct13">From, Marcus · To, Will</label><textarea id="reply-oct13" rows="4" autocomplete="off"></textarea><button type="submit">Reply</button></form>
+      </article>
+      <article class="letter" data-letter="oct14" hidden>
+        <h2>Press inquiry — Blackwood House</h2>
+        <div class="msg staff"><p class="badge received">Received</p><p class="when">October 14, 2026</p><p class="who">From, Danielle</p><p class="addr">D*****@vyde.io</p><p class="to">To, Marcus Hale <span>marcus.hale@vyde.io</span></p><div class="body"><p>Hi Marcus,</p><p>Just a quick heads up from the marketing side. We've had a couple of inquiries come in about the Blackwood House story that's been in the local paper, and I want to make sure we're all on the same page.</p><p>Our policy is that we don't discuss client matters with media, full stop. If a reporter calls or emails, the answer is simply that we don't comment. No confirming, no denying, nothing.</p><p>I'd also gently suggest you don't reply to anyone from the paper directly. Even a short "no comment" can get quoted in a way that doesn't help.</p><p>If you get contacted, just forward it to me and I'll handle it.</p><p class="sign">Danielle<br><span>Marketing and Email Manager</span></p></div></div>
+        <div class="msg marcus"><p class="badge sent">Sent</p><p class="subject">Re: Press inquiry</p><p class="when">October 14, 2026</p><p class="who">From, Marcus Hale</p><p class="addr">marcus.hale@vyde.io</p><p class="to">To, Danielle <span>D*****@vyde.io</span></p><div class="body"><p>I did not talk to the paper.</p></div></div>
+        <form class="reply"><label for="reply-oct14">From, Marcus · To, Danielle</label><textarea id="reply-oct14" rows="4" autocomplete="off"></textarea><button type="submit">Reply</button></form>
+      </article>
+      <article class="letter" data-letter="oct16" hidden>
+        <h2>Deposit still in holding</h2>
+        <div class="msg staff"><p class="badge received">Received</p><p class="when">October 16, 2026</p><p class="who">From, Finn</p><p class="addr">F*****@vyde.io</p><p class="to">To, Marcus Hale <span>marcus.hale@vyde.io</span></p><div class="body"><p>Hi Marcus,</p><p>I was reviewing your file for the weekly check and noticed the large deposit from early October is still sitting in a holding line. It's not reflected in your income totals.</p><p>A day or two in holding is completely normal — sometimes entries take a moment to fully process. But it's been well over a week now, and that's not typical. I want to flag it in case something got stuck.</p><p>Do you know if anyone asked for it to be held, or should I check with the bookkeeping team about pushing it through?</p><p class="sign">Finn<br><span>Data Analyst</span></p></div></div>
+        <div class="msg marcus"><p class="badge sent">Sent</p><p class="subject">Re: Deposit still in holding</p><p class="when">October 16, 2026</p><p class="who">From, Marcus Hale</p><p class="addr">marcus.hale@vyde.io</p><p class="to">To, Finn <span>F*****@vyde.io</span></p><div class="body"><p>No one. Put it through.</p></div></div>
+        <form class="reply"><label for="reply-oct16">From, Marcus · To, Finn</label><textarea id="reply-oct16" rows="4" autocomplete="off"></textarea><button type="submit">Reply</button></form>
+      </article>
+      <article class="letter" data-letter="oct17" hidden>
+        <h2>November billing — $249</h2>
+        <div class="msg staff"><p class="badge received">Received</p><p class="when">October 17, 2026</p><p class="who">From, Kiana</p><p class="addr">K*****@vyde.io</p><p class="to">To, Marcus Hale <span>marcus.hale@vyde.io</span></p><div class="body"><p>Hi Marcus,</p><p>This is Kiana from billing. Your November bookkeeping charge of $249 has posted to your account today, and I wanted to give you a quick summary of where things stand.</p><p>I also noticed that the large deposit from October isn't showing on your receivable page, which means I can't generate an accurate billing summary against it. For an account this size I'd like to have the full picture so nothing gets missed.</p><p>Could you have your bookkeeper confirm the deposit is fully posted? Once that's done I can reconcile everything on my end.</p><p class="sign">Thanks,<br>Kiana<br><span>Billing Manager</span></p></div></div>
+        <form class="reply"><label for="reply-oct17">From, Marcus · To, Kiana</label><textarea id="reply-oct17" rows="4" autocomplete="off"></textarea><button type="submit">Reply</button></form>
+      </article>
+      <article class="letter" data-letter="oct20" hidden>
+        <h2>October statement — question</h2>
+        <div class="msg staff"><p class="badge received">Received</p><p class="when">October 20, 2026</p><p class="who">From, Jonathan</p><p class="addr">J*****@vyde.io</p><p class="to">To, Marcus Hale <span>marcus.hale@vyde.io</span></p><div class="body"><p>Hi Marcus,</p><p>I pulled your October bank statement for the file and I'm seeing the deposit come in on the 2nd, which matches what we have. What I'm not seeing is any withdrawal. If any portion of those funds was moved — to another account, another institution, anywhere — it's not reflected in the statement I was given.</p><p>I want to be upfront that if the statement you have shows something different from ours, we should compare them side by side before anything else happens with this file. Discrepancies at this dollar level are exactly the kind of thing that turns into a problem later if we don't catch it early.</p><p>Can you confirm which statement you're looking at?</p><p class="sign">Jonathan<br><span>Bookkeeper</span></p></div></div>
+        <div class="msg marcus"><p class="badge sent">Sent</p><p class="subject">Re: October statement</p><p class="when">October 20, 2026</p><p class="who">From, Marcus Hale</p><p class="addr">marcus.hale@vyde.io</p><p class="to">To, Jonathan <span>J*****@vyde.io</span></p><div class="body"><p>I have not moved it. If the statement and the books don't match, someone else did.</p></div></div>
+        <form class="reply"><label for="reply-oct20">From, Marcus · To, Jonathan</label><textarea id="reply-oct20" rows="4" autocomplete="off"></textarea><button type="submit">Reply</button></form>
+      </article>
+      <article class="letter" data-letter="oct21" hidden>
+        <h2>Call from someone claiming to be family</h2>
+        <div class="msg staff"><p class="badge received">Received</p><p class="when">October 21, 2026</p><p class="who">From, Patricia</p><p class="addr">P*****@vyde.io</p><p class="to">To, Marcus Hale <span>marcus.hale@vyde.io</span></p><div class="body"><p>Hi Marcus,</p><p>I wanted to let you know about a call that came in today. A woman called asking if you'd been in to the office. She wouldn't give a last name when I asked.</p><p>I told her, as we do with all client inquiries, that we don't confirm who visits or who our clients are. She then said she was family, but again wouldn't provide more detail.</p><p>I did not transfer her or share any information. I just wanted you to be aware in case she calls again or shows up.</p><p class="sign">Patricia<br><span>Customer Service</span></p></div></div>
+        <div class="msg marcus"><p class="badge sent">Sent</p><p class="subject">Re: Call from someone claiming to be family</p><p class="when">October 21, 2026</p><p class="who">From, Marcus Hale</p><p class="addr">marcus.hale@vyde.io</p><p class="to">To, Patricia <span>P*****@vyde.io</span></p><div class="body"><p>Do not transfer her. Do not tell her I am coming in.</p></div></div>
+        <form class="reply"><label for="reply-oct21">From, Marcus · To, Patricia</label><textarea id="reply-oct21" rows="4" autocomplete="off"></textarea><button type="submit">Reply</button></form>
+      </article>
+      <article class="letter" data-letter="oct23" hidden>
+        <h2>Tonight</h2>
+        <p class="route">Sent from this office</p>
+        <div class="msg marcus"><p class="badge sent">Sent</p><p class="when">October 23, 2026 · 4:12 p.m.</p><p class="who">From, Marcus Hale</p><p class="addr">marcus.hale@vyde.io</p><p class="to">To, bookkeeper@vyde.io</p><div class="body"><p>I'm coming in tonight. I want the statement and the books side by side. If the eight million is not on both, I want the name of who took it off. Do not leave before I get there.</p></div></div>
+        <form class="reply"><label for="reply-oct23">From, Marcus · To, bookkeeper</label><textarea id="reply-oct23" rows="4" autocomplete="off"></textarea><button type="submit">Reply</button></form>
+      </article>
     </div>
   </div>
   <script>
@@ -362,12 +622,41 @@
         return;
       }
       document.getElementById("gate").hidden = true;
-      document.getElementById("books").hidden = false;
+      document.getElementById("home").hidden = false;
+    });
+    document.querySelectorAll("[data-room]").forEach(function (button) {
+      button.addEventListener("click", function () {
+        var room = button.getAttribute("data-room");
+        document.getElementById("home").hidden = room !== "home";
+        document.getElementById("books").hidden = room !== "books";
+        document.getElementById("messages").hidden = room !== "messages";
+      });
+    });
+    document.querySelectorAll(".reply").forEach(function (form) {
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+      });
+    });
+    document.querySelectorAll("[data-thread]").forEach(function (button) {
+      button.addEventListener("click", function () {
+        var thread = button.getAttribute("data-thread");
+        document.querySelectorAll("[data-letter]").forEach(function (letter) {
+          letter.hidden = letter.getAttribute("data-letter") !== thread;
+        });
+        document.querySelectorAll("[data-thread]").forEach(function (item) {
+          if (item === button) item.setAttribute("aria-current", "page");
+          else item.removeAttribute("aria-current");
+        });
+        if (window.matchMedia("(max-width: 800px)").matches) {
+          var open = document.querySelector("[data-letter]:not([hidden])");
+          if (open) open.scrollIntoView({ block: "start" });
+        }
+      });
     });
     var titles = {
-      register: ["Bank register", "Meridian County Bank · County Road branch · Marcus Hale", "Sep 16 – Oct 15, 2026", "Active register has no entries after October 15"],
-      statement: ["Bank statement", "Filed copy · September 16 – October 15, 2026", "Sep 16 – Oct 15, 2026", "Active register has no entries after October 15"],
-      deleted: ["Deleted transactions", "Removed by the bookkeeper · excluded from the register", "Not on the statement", "Deleted withdrawal 8,000,000.00 excluded"]
+      register: ["Bank register", "Meridian County Bank · County Road branch · Marcus Hale", "Sep 16 – Oct 25, 2026", "Register through October 25", "Book balance 8,642,101.18", "October 16–25 statement 642,101.18", "Difference 8,000,000.00", "September 16 – October 15 statement still ties"],
+      statement: ["Bank statement", "Meridian County Bank · County Road branch · Marcus Hale", "Sep 16 – Oct 25, 2026", "Book balance 8,642,101.18", "October 16–25 statement 642,101.18", "Difference 8,000,000.00", "September 16 – October 15 statement still ties", "The later statement is not the same as the books"],
+      deleted: ["Deleted transactions", "Removed by the bookkeeper · excluded from the register", "Excluded from the register", "Removed by the bookkeeper", "Amount 8,000,000.00", "Excluded from the coding", "Not in the book balance", "Oct 21 outgoing wire excluded"]
     };
     var buttons = document.querySelectorAll("[data-view]");
     buttons.forEach(function (button) {
@@ -383,7 +672,11 @@
         document.getElementById("view-title").textContent = titles[view][0];
         document.getElementById("view-note").textContent = titles[view][1];
         document.getElementById("view-period").textContent = titles[view][2];
-        document.getElementById("status-extra").textContent = titles[view][3];
+        document.getElementById("status-1").textContent = titles[view][3];
+        document.getElementById("status-2").textContent = titles[view][4];
+        document.getElementById("status-3").textContent = titles[view][5];
+        document.getElementById("status-4").textContent = titles[view][6];
+        document.getElementById("status-extra").textContent = titles[view][7];
       });
     });
   </script>
