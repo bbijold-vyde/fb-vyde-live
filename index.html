@@ -22,6 +22,7 @@
     nav a { font-weight:500; }
     .hero { max-width:1100px; margin:2rem auto; padding:0 1.5rem; }
     .breaking { background:var(--gold); color:var(--navy); display:inline-block; padding:.25rem .75rem; font-size:.75rem; font-weight:600; letter-spacing:1px; text-transform:uppercase; margin-bottom:1rem; }
+    .breaking.death { background:#b91c1c; color:var(--cream); }
     h2.article-title { font-family:'Playfair Display',serif; font-size:2.5rem; line-height:1.2; margin-bottom:.75rem; color:var(--cream); }
     .byline { color:var(--text-muted); font-size:.9rem; margin-bottom:1.5rem; }
     .hero-image { width:100%; max-height:420px; object-fit:cover; border-radius:4px; margin-bottom:1.5rem; }
@@ -60,31 +61,27 @@
   </header>
 
   <main class="hero">
-    <div class="breaking">Current · October 23, 2026</div>
-    <h2 class="article-title">Helen Voss: “Not everyone<br>needs a headline.”</h2>
-    <p class="byline">FB-VYDE Investigative Unit &nbsp;|&nbsp; Case File 26-HALE &nbsp;|&nbsp; October 23, 2026</p>
-    <img src="helen.jpg" alt="Helen Voss" class="hero-image portrait">
+    <div class="breaking death">Death · October 26, 2026</div>
+    <h2 class="article-title">Marcus Hale found dead<br>in the Vyde offices.</h2>
+    <p class="byline">FB-VYDE Investigative Unit &nbsp;|&nbsp; Case File 26-HALE &nbsp;|&nbsp; October 26, 2026</p>
+    <img src="marcus.jpg" alt="Marcus Hale" class="hero-image portrait">
     <div class="article-body">
-      <p>Helen Voss married Colin Blackwood. She says that is enough to have an opinion, and she is not asking for a headline. Eleanor did not like a crowd, and neither does she.</p>
-      <p>She will not say whether she has tried the study door. She has been to the house. She wants the question answered by someone who can keep a file, not in a room full of people who have already decided.</p>
-      <p>Marcus says the fortune is his. She says that is more than he has said to the rest of them. She can live with a private arrangement.</p>
-      <p><a href="news.html#helen">County Register article →</a></p>
-      <p><a href="news.html#irene">Irene Blackwood: Waiting is not an inheritance →</a></p>
+      <p>Marcus Hale was found dead Friday night in the back corner of the Vyde offices on County Road. Staff discovered him after hours. The county was notified. The Register held the report until this morning.</p>
+      <p>Pages from the 1974 documents were on the desk and on the floor. There was no weapon. The office was otherwise in order. With him was the iron key to the study at Blackwood House, produced for the first time, and a note with a username and a password for his private file. FB-VYDE has taken both into evidence.</p>
+      <p>On October 2, eight point six million from the Blackwood Remainder Trust was wired into a personal account in his name. The money has not been accounted for in full. Irene Blackwood, Colin Blackwood, and Helen Voss have not given statements. No person has been named. The house is still empty. The key has now been seen.</p>
+      <p><a href="news.html#death">County Register article →</a></p>
+      <p><a href="updates.html#death">Case update →</a></p>
     </div>
   </main>
 
   <section class="section">
     <h3>Where the file stands</h3>
     <div class="phase">
-      <h4>Open now — Is Marcus the heir?</h4>
-      <p>The house is empty. The papers name the holder of the key, not a person. Irene says the money has already been wired into his account. The family is arguing. The books are going to Vyde.</p>
+      <h4>Open now — The death and the money</h4>
+      <p>Marcus Hale was found dead Friday night in the Vyde offices. The iron key was with the body. A note with a username and a password for his private file was with the body. Both are in evidence. Eight point six million was wired on October 2 and has not been accounted for in full. No person has been named. The house is still empty.</p>
     </div>
-    <!-- FUTURE: do not uncomment until the week of the murder
-    <div class="phase">
-      <h4>Held — The weekend</h4>
-      <p>Marcus Hale is found dead. The key is with the body. The password to his mail is with the body. The fortune is still missing.</p>
-    </div>
-    <div class="phase">
+    <!-- FUTURE: do not uncomment until Friday, October 30
+    <div class="phase hold">
       <h4>Held — Friday, October 30</h4>
       <p>Final findings. Helen outside. The person inside who cleaned the books.</p>
     </div>
@@ -94,6 +91,14 @@
   <section class="section">
     <h3>Released</h3>
     <div class="grid">
+      <article class="card">
+        <img src="marcus.jpg" alt="Marcus Hale">
+        <div class="card-content">
+          <h4>October 26 — Found dead in the Vyde offices.</h4>
+          <p>Friday night. The iron key was with him. The money has not been accounted for in full.</p>
+          <a href="news.html#death">The article →</a>
+        </div>
+      </article>
       <article class="card">
         <img src="helen.jpg" alt="Helen Voss">
         <div class="card-content">
