@@ -25,6 +25,8 @@
     .intro { color:var(--text-muted); margin-bottom:2rem; }
     .suspect { background:var(--navy-light); border:1px solid rgba(201,162,39,.25); border-radius:6px; padding:1.5rem; margin-bottom:1.5rem; display:grid; grid-template-columns:120px 1fr; gap:1.25rem; }
     .suspect img { width:120px; height:150px; object-fit:cover; object-position:center 15%; border-radius:4px; }
+    .suspect.scene { grid-template-columns:1fr; }
+    .suspect.scene img { width:100%; height:auto; max-height:320px; object-fit:cover; object-position:center; }
     .suspect h3 { color:var(--gold); font-size:1.4rem; margin-bottom:.25rem; }
     .role { color:var(--text-muted); font-size:.9rem; margin-bottom:.75rem; font-style:italic; }
     footer { background:#070e18; text-align:center; padding:2rem; margin-top:4rem; font-size:.85rem; color:var(--text-muted); border-top:1px solid rgba(201,162,39,.2); }
@@ -48,14 +50,23 @@
 
   <div class="container">
     <h2>Persons</h2>
-    <p class="intro">Named so far. Office players who signed up are not listed until they are given a statement.</p>
+    <p class="intro">Named so far. The file is closed.</p>
+
+    <article class="suspect scene">
+      <img src="offices-night.jpg" alt="Police outside the Vyde offices at night">
+      <div>
+        <h3>Benjamin</h3>
+        <p class="role">Bookkeeper at Vyde. In custody.</p>
+        <p>He was stopped at the door after the office Halloween party. Badge B-214 entered the offices at 9:06 p.m. on October 23. The door opened from the inside at 9:41 p.m. He had said he was at a show at The Depot. There was no show. He moved the $8 million and took the line off the books. He is named in the death of Marcus Hale.</p>
+      </div>
+    </article>
 
     <article class="suspect">
       <img src="marcus.jpg" alt="Marcus Hale">
       <div>
         <h3>Marcus Hale</h3>
         <p class="role">Found dead Friday night in the Vyde offices.</p>
-        <p>He claimed the Blackwood fortune. On October 2, eight point six million from the Blackwood Remainder Trust was wired into a personal account in his name. The iron key to the study was with him. It is the first time the key has been produced. A note with a username and a password for his private file was with him. Both are in evidence. The money has not been accounted for in full.</p>
+        <p>He claimed the Blackwood fortune. On October 2, eight point six million from the Blackwood Remainder Trust was wired into a personal account in his name. The iron key to the study was with him. It is the first time the key has been produced. A note with a username and a password for his private file was with him. Both are in evidence. The coroner placed the death between 9:10 and 9:30 p.m. on October 23. The cause was ligature strangulation. The ligature was a computer power cord from the office.</p>
       </div>
     </article>
 
@@ -81,8 +92,8 @@
       <img src="helen.jpg" alt="Helen Voss">
       <div>
         <h3>Helen Voss</h3>
-        <p class="role">Married into the family.</p>
-        <p>She will not say if she tried the study door. She wants the question answered by someone who can keep a file. If Marcus has the documents, the fight is wherever the books are going to be kept. She has been told of the death. She has not given a statement.</p>
+        <p class="role">Named in the Hale death. She was not in the office.</p>
+        <p>She wanted the fortune kept in the family and out of the paper. She is the one who pushed the split. Benjamin moved the money and took the line off the books. She was not in the office on October 23. She is named as the one outside.</p>
       </div>
     </article>
 
